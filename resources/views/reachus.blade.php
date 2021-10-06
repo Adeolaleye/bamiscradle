@@ -27,7 +27,7 @@
                     <div class="contact-form">
                         <h3>Ready to Get Started?</h3>
                         @include('includes.alerts')
-                        <form id="contactForm" method="POST" action="{{ route('contact') }}">
+                        <form id="contactForm" method="POST" action="{{ route('contactus') }}">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12 col-md-6">
