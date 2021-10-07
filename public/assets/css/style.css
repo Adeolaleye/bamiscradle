@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Sacramento&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
 body {
     padding: 0;
@@ -179,10 +180,11 @@ h6:last-child {
 }
 
 .section-title span {
-    font-size: 20px;
+    font-size: 18px;
     color: #eb373d;
     font-weight: 600;
-    font-family: sacramento, cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;
 }
 .section-title h2 {
     font-size: 45px;
@@ -1420,10 +1422,11 @@ h6:last-child {
     animation: border-transform-default 50s linear infinite alternate forwards;
 }
 .who-we-are-content span {
-    font-size: 20px;
+    font-size: 18px;
     color: #eb373d;
     font-weight: 600;
-    font-family: sacramento, cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;
 }
 .who-we-are-content h3 {
     font-size: 39px;
@@ -1608,10 +1611,11 @@ h6:last-child {
     position: relative;
     z-index: 1;
 }
-.value-item .value-content span {
-    font-size: 20px;
+.value-item .va18e-content span {
+    font-size: 18px;
     font-weight: 600;
-    font-family: sacramento, cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;
     color: #eb373d;
 }
 .value-item .value-content h3 {
@@ -2669,10 +2673,11 @@ h6:last-child {
     animation: moveLeftBounce 3s linear infinite;
 }
 .single-choose-item span {
-    font-size: 20px;
+    font-size: 18px;
     color: #eb373d;
     font-weight: 600;
-    font-family: sacramento, cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;
 }
 .single-choose-item h3 {
     font-size: 45px;
@@ -2757,10 +2762,11 @@ h6:last-child {
     margin-bottom: 30px;
 }
 .quote-item .content span {
-    font-size: 20px;
+    font-size: 18px;
     color: #eb373d;
     font-weight: 600;
-    font-family: sacramento, cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;
 }
 .quote-item .content h3 {
     font-size: 45px;

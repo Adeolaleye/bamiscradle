@@ -2,7 +2,7 @@
 {{-- Header --}}
 @slot('header')
 @component('mail::header', ['url' => config('app.url')])
-<img src="https://demo.bamiscradle.com/assets/img/logo.png" class="logo" alt="Bamiscradle" height="35px">
+<img src="https://bamiscradle.com/assets/img/logo.png" class="logo" alt="Bamiscradle" height="35px">
 @endcomponent
 @endslot
 
