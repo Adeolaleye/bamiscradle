@@ -4,7 +4,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="enrollaction-content">
-                        <h2>Do You Want To Your CHild To Be Part Of Us Now?</h2>
+                        <h2>Give your child the best start to life.</h2>
                     </div>
                 </div>
                 <div class="col-lg-6"  style="text-align: center;">
