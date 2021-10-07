@@ -55,7 +55,7 @@
     <strong>Phone : </strong>{{ $data['pickup_phone_1'] }}<br>
     <strong>Email : </strong> {{ $data['pickup_email_1'] }}<br>
     <strong>Address : </strong>{{ $data['pickup_address_1'] }}<br>
-    <strong>Picture: </strong> <img src="{{ $data['pickup_picture_1'] }}">
+    <strong>Picture: </strong> Attached to this mail if available
 </p>
 </p><h4>Pick Up Details 2</h4>
 <p>
@@ -63,7 +63,7 @@
     <strong>Phone : </strong>{{ $data['pickup_phone_2'] }}<br>
     <strong>Email : </strong> {{ $data['pickup_email_2'] }}<br>
     <strong>Address : </strong>{{ $data['pickup_address_2'] }}<br>
-    <strong>Picture: </strong> <img src="{{ $data['pickup_picture_2'] }}">
+    <strong>Picture: </strong> Attached to this mail if available
 </p>
 <p>Note that {{ $data['p_name'] }} awaits your feedback.</p>
 <span>Enrolled on {{ date('d, M Y @ h:i:s', strtotime($data['date'])) }}.</span>
@@ -102,7 +102,7 @@
     <strong>Phone : </strong>{{ $data['pickup_phone_1'] }}<br>
     <strong>Email : </strong> {{ $data['pickup_email_1'] }}<br>
     <strong>Address : </strong>{{ $data['pickup_address_1'] }}<br>
-    <strong>Picture: </strong> <img src="{{ $data['pickup_picture_1'] }}">
+    <strong>Picture: </strong> Attached to this mail if available
 </p>
 </p><h4>Pick Up Details 2</h4>
 <p>
@@ -110,7 +110,7 @@
     <strong>Phone : </strong>{{ $data['pickup_phone_2'] }}<br>
     <strong>Email : </strong> {{ $data['pickup_email_2'] }}<br>
     <strong>Address : </strong>{{ $data['pickup_address_2'] }}<br>
-    <strong>Picture: </strong> <img src="{{ $data['pickup_picture_2'] }}">
+    <strong>Picture: </strong> Attached to this mail if available
 </p>
 <p>Perhaps you made mistake while entering any of this details, or you have further enquires, follow this <a href="">link</a> to contact us</p>
 <span>Enrolled on {{ date('d, M Y @ h:i:s', strtotime($data['date'])) }}.</span>
