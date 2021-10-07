@@ -147,8 +147,8 @@ class EnrollController extends Controller
             'date'=>Carbon::now(),
         ];
         // dd($data);
-        Mail::to('theconsode@gmail.com')->send(new bamiEmail($data));
-        // Mail::to('davsong16@gmail.com')->send(new bamiEmail($data));
+        // Mail::to('theconsode@gmail.com')->send(new bamiEmail($data));
+        Mail::to('davsong16@gmail.com')->send(new bamiEmail($data));
 
         $data['subject'] = 'Application Recieved';
         $data['type'] = 'application recieved';

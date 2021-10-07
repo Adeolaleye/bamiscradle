@@ -38,78 +38,11 @@ class bamiEmail extends Mailable
         }
 
         if(isset($this->data['type']) && $this->data['type'] == 'new applicant'){ 
-            //default mail
-            if(is_null($this->data['pickup_picture_1']) && is_null($this->data['pickup_picture_2'])){
-                return $this->markdown('emails.enroll')
-                    ->subject($this->data['subject']);
-            }
-            //check for pic 2
-            if(is_null($this->data['pickup_picture_1']) && !is_null($this->data['pickup_picture_2'])){
-                return $this->markdown('emails.enroll')
-                    ->subject($this->data['subject'])
-                    ->attach($this->data['pickup_picture_2'], [
-                        'as' => 'Picture 2',
-                    ]);
-                  
-            }
-            //check for pic 2
-            if(!is_null($this->data['pickup_picture_1']) && is_null($this->data['pickup_picture_2'])){
-                return $this->markdown('emails.enroll')
-                    ->subject($this->data['subject'])
-                    ->attach($this->data['pickup_picture_1'], [
-                        'as' => 'Picture 1',
-                    ]);
-            }
-             //otherwise send pic 1 and 2
-            if(!is_null($this->data['pickup_picture_1']) && !is_null($this->data['pickup_picture_2'])){
-                return $this->markdown('emails.enroll')
-                    ->subject($this->data['subject'])
-                    ->attach($this->data['pickup_picture_1'], [
-                        'as' => 'Picture 1',
-                    ])
-                    ->attach($this->data['pickup_picture_2'], [
-                        'as' => 'Picture 2',
-                    ]); 
-                
-            }
-            
+            $this->verifyAttachments($this->data);
         }
+        
         if(isset($this->data['type']) && $this->data['type'] == 'application recieved'){ 
-            //default mail
-            if(is_null($this->data['pickup_picture_1']) && is_null($this->data['pickup_picture_2'])){
-                return $this->markdown('emails.enroll')
-                    ->subject($this->data['subject']);
-            }
-            //check for pic 2
-            if(is_null($this->data['pickup_picture_1']) && !is_null($this->data['pickup_picture_2'])){
-                return $this->markdown('emails.enroll')
-                    ->subject($this->data['subject'])
-                    ->attach($this->data['pickup_picture_2'], [
-                        'as' => 'Picture 2',
-                    ]);
-                  
-            }
-            //check for pic 2
-            if(!is_null($this->data['pickup_picture_1']) && is_null($this->data['pickup_picture_2'])){
-                return $this->markdown('emails.enroll')
-                    ->subject($this->data['subject'])
-                    ->attach($this->data['pickup_picture_1'], [
-                        'as' => 'Picture 1',
-                    ]);
-            }
-             //otherwise send pic 1 and 2
-            if(!is_null($this->data['pickup_picture_1']) && !is_null($this->data['pickup_picture_2'])){
-                return $this->markdown('emails.enroll')
-                    ->subject($this->data['subject'])
-                    ->attach($this->data['pickup_picture_1'], [
-                        'as' => 'Picture 1',
-                    ])
-                    ->attach($this->data['pickup_picture_2'], [
-                        'as' => 'Picture 2',
-                    ]); 
-                
-            }
-            
+            $this->verifyAttachments($this->data);            
         }
         // if(isset($this->data['type']) && $this->data['type'] == 'application recieved'){ 
         //     if($this->data['pickup_picture_1'] == 'N/A' or $this->data['pickup_picture_2'] == 'N/A' ){
@@ -122,5 +55,42 @@ class bamiEmail extends Mailable
         //             ->subject($this->data['subject']);
         //     }
         // }
+    }
+
+    private function verifyAttachments($data){
+        //default mail
+        if(is_null($this->data['pickup_picture_1']) && is_null($this->data['pickup_picture_2'])){
+            return $this->markdown('emails.enroll')
+                ->subject($this->data['subject']);
+        }
+        //check for pic 2
+        if(is_null($this->data['pickup_picture_1']) && !is_null($this->data['pickup_picture_2'])){
+            return $this->markdown('emails.enroll')
+                ->subject($this->data['subject'])
+                ->attach($this->data['pickup_picture_2'], [
+                    'as' => 'Picture 2',
+                ]);
+              
+        }
+        //check for pic 2
+        if(!is_null($this->data['pickup_picture_1']) && is_null($this->data['pickup_picture_2'])){
+            return $this->markdown('emails.enroll')
+                ->subject($this->data['subject'])
+                ->attach($this->data['pickup_picture_1'], [
+                    'as' => 'Picture 1',
+                ]);
+        }
+         //otherwise send pic 1 and 2
+        if(!is_null($this->data['pickup_picture_1']) && !is_null($this->data['pickup_picture_2'])){
+            return $this->markdown('emails.enroll')
+                ->subject($this->data['subject'])
+                ->attach($this->data['pickup_picture_1'], [
+                    'as' => 'Picture 1',
+                ])
+                ->attach($this->data['pickup_picture_2'], [
+                    'as' => 'Picture 2',
+                ]); 
+            
+        }
     }
 }
